@@ -36,7 +36,7 @@ const Hero = () => {
 
       <div
         data-aos="fade-out"
-        className="flex flex-col gap-5 md:gap-7 mt-8 md:mt-14 md:px-20 lg:px-32 text-medium-grey text-lg md:text-xl font-normal leading-6 md:leading-7 font-sans"
+        className="flex flex-col gap-5 md:gap-7 mt-8 md:mt-14 md:px-20 lg:px-32 text-black text-lg md:text-xl font-medium leading-6 md:leading-7"
       >
         {textArr.map((text, i) => (
           <h6 key={i}>{text}</h6>

@@ -3,7 +3,7 @@ import NavBar from "../../components/navBar/NavBar";
 import Footer from "../../components/footer/Footer";
 import { useLocation, useParams } from "react-router-dom";
 import data from "../../assets/data.json";
-import Check from "../../components/check/Check";
+import Connect from "../../components/connect";
 
 const ProjectsDetails = () => {
   const { id } = useParams();
@@ -19,55 +19,39 @@ const ProjectsDetails = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  const checkData =
-    Number(id) === 1
-      ? [data[1], data[2]]
-      : Number(id) === 2
-      ? [data[2], data[3]]
-      : Number(id) === 3
-      ? [data[0], data[3]]
-      : [data[1], data[0]];
-
   const renderHeder = () => {
     const textId = Number(id);
 
     if (textId === 2)
       return (
         <h2 className="leading-tight">
-          A <span className="text-black-text italic">comprehensive </span>
-          platform that provides intuitive solution for
-          <span className="text-black-text italic">
-            {" "}
-            field data collection.
-          </span>
+          From a disconnected data tool to a unified platform. How I diagnosed a
+          fragmented platform and turned into a comprehensive platform that
+          provides intuitive solution for field data collection.
         </h2>
       );
 
     if (textId === 3)
       return (
         <h2 className="leading-tight">
-          A <span className="text-black-text italic">smart app </span>
-          for managing finances and tracking expenses
-          <span className="text-black-text italic"> anywhere </span>in the
-          world.
+          A smart app designed to help users take control of their money through
+          budget tracking, investment visibility and a rewards system that turns
+          good financial habits into tangible benefits.
         </h2>
       );
 
     if (textId === 4)
       return (
         <h2 className="leading-tight">
-          An <span className="text-black-text italic">interactive </span> and{" "}
-          <span className="text-black-text italic">accessible </span>e-learning
-          experience that
-          <span className="text-black-text italic"> empowers</span> learners.
+          An interactive and accessible e-learning experience that empowers
+          learners.
         </h2>
       );
 
     return (
       <h2 className="leading-tight">
-        An <span className="text-black-text italic">innovative </span>
-        solution that integrates key CRM features into a
-        <span className="text-black-text italic"> system platform.</span>
+        An innovation solution that integrates key CRM features into a system
+        platform.
       </h2>
     );
   };
@@ -78,7 +62,7 @@ const ProjectsDetails = () => {
       <div className="px-4 md:px-10 mb-20">
         <div
           data-aos="fade-up"
-          className="lg:px-32 w-[95%] md:w-[85%] xl:w-[70%] mt-16 md:mt-20 xl:mt-32 2xl:mt-48 text-2xl md:text-3xl xl:text-5xl font-normal md:leading-tight font-baskervville text-fade-grey"
+          className="lg:px-28 w-[95%] md:w-[85%] 2xl:w-[75%] mt-16 md:mt-20 xl:mt-32 2xl:mt-48 text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-normal md:leading-tight text-fade-grey"
         >
           {renderHeder()}
         </div>
@@ -111,28 +95,48 @@ const ProjectsDetails = () => {
           >
             {project?.name}
           </h5>
-          <div className="mt-5 border-t border-light-grey-border py-5 md:py-8 lg:py-10 flex justify-between text-medium-grey font-sans md:text-lg lg:text-xl font-normal">
-            <div data-aos="fade-right" className="md:flex-1 w-[30%] md:w-auto font-semibold">
-              <h6>Year</h6>
+          <div className="mt-5 border-t border-light-grey-border py-5 md:py-8 lg:py-10 flex justify-between text-medium-grey md:text-lg lg:text-xl font-normal">
+            <div
+              data-aos="fade-right"
+              className="md:flex-1 w-[30%] md:w-auto font-semibold font-baskervville"
+            >
+              <h6>
+                {project?.id === 4
+                  ? "Research Findings"
+                  : "The Problem (Research Findings)"}
+              </h6>
             </div>
 
             <div data-aos="fade-left" className="md:flex-1 w-[65%] md:w-auto">
-              <h6>{project?.year}</h6>
+              <h6>{project?.research}</h6>
             </div>
           </div>
 
-          <div className="border-t border-light-grey-border py-5 md:py-8 lg:py-10 flex justify-between text-medium-grey font-sans md:text-lg lg:text-xl font-normal">
-            <div data-aos="fade-right" className="md:flex-1 w-[30%] md:w-auto font-semibold">
-              <h6>Service</h6>
+          <div className="border-t border-light-grey-border py-5 md:py-8 lg:py-10 flex justify-between text-medium-grey md:text-lg lg:text-xl font-normal">
+            <div
+              data-aos="fade-right"
+              className="md:flex-1 w-[30%] md:w-auto font-semibold font-baskervville"
+            >
+              <h6>{project?.id === 4 ? "Tasks" : "My Role"}</h6>
             </div>
 
-            <div data-aos="fade-left" className="md:flex-1 w-[65%] md:w-auto">
-              <h6>{project?.service}</h6>
+            <div className="md:flex-1 w-[65%] md:w-auto">
+              <ul
+                data-aos="fade-left"
+                className="list-disc flex flex-col gap-3 md:ml-5"
+              >
+                {project?.tasks?.map((task, i) => (
+                  <li key={i}>{task}</li>
+                ))}
+              </ul>
             </div>
           </div>
 
-          <div className="border-t border-light-grey-border py-5 md:py-8 lg:py-10 flex justify-between text-medium-grey font-sans md:text-lg lg:text-xl font-normal">
-            <div data-aos="fade-right" className="md:flex-1 w-[30%] md:w-auto font-semibold">
+          {/* <div className="border-t border-light-grey-border py-5 md:py-8 lg:py-10 flex justify-between text-medium-grey font-sans md:text-lg lg:text-xl font-normal">
+            <div
+              data-aos="fade-right"
+              className="md:flex-1 w-[30%] md:w-auto font-semibold"
+            >
               <h6>About Project</h6>
             </div>
 
@@ -142,7 +146,7 @@ const ProjectsDetails = () => {
             >
               <h6>{project?.about}</h6>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {project && (
@@ -183,45 +187,43 @@ const ProjectsDetails = () => {
         )}
 
         <div className="lg:px-32 mt-5 mb-2 lg:my-12">
-          <h5
-            data-aos="fade-right"
-            className="text-black-text font-baskervville italic font-normal text-lg md:text-xl lg:text-2xl"
-          >
-            {project?.desc}
-          </h5>
-          <div className="mt-5 border-t border-light-grey-border py-5 md:py-8 lg:py-10 flex justify-between text-medium-grey font-sans md:text-lg lg:text-xl font-normal">
-            <div data-aos="fade-right" className="md:flex-1 w-[30%] md:w-auto font-semibold">
-              <h6>
-                {id === "1"
-                  ? "The Problem (Research Findings)"
-                  : "Research Findings"}
-              </h6>
+          <div className="mt-5 border-t border-light-grey-border py-5 md:py-8 lg:py-10 flex justify-between text-medium-grey md:text-lg lg:text-xl font-normal">
+            <div
+              data-aos="fade-right"
+              className="md:flex-1 w-[30%] md:w-auto font-semibold font-baskervville"
+            >
+              <h6>{id === "1" ? "The Goal" : "About Project"}</h6>
             </div>
 
             <div data-aos="fade-left" className="md:flex-1 w-[65%] md:w-auto">
-              <h6>{project?.research}</h6>
+              <h6>{id === "1" ? project?.goal : project?.about}</h6>
             </div>
           </div>
 
-          <div className="border-t border-light-grey-border py-5 md:py-8 lg:py-10 flex justify-between text-medium-grey font-sans md:text-lg lg:text-xl font-normal">
-            <div data-aos="fade-right" className="md:flex-1 w-[30%] md:w-auto font-semibold">
-              <h6>{id === "1" ? "My Role" : "Tasks"}</h6>
-            </div>
-
-            <div className="md:flex-1 w-[65%] md:w-auto">
-              <ul
-                data-aos="fade-left"
-                className="list-disc flex flex-col gap-3 md:ml-5"
+          {project?.id === 4 && (
+            <div className="border-t border-light-grey-border py-5 md:py-8 lg:py-10 flex justify-between text-medium-grey md:text-lg lg:text-xl font-normal">
+              <div
+                data-aos="fade-right"
+                className="md:flex-1 w-[30%] md:w-auto font-semibold font-baskervville"
               >
-                {project?.tasks?.map((task, i) => (
-                  <li key={i}>{task}</li>
-                ))}
-              </ul>
+                <h6>Final Designs</h6>
+              </div>
+
+              <div className="md:flex-1 w-[65%] md:w-auto">
+                <ul
+                  data-aos="fade-left"
+                  className="list-disc flex flex-col gap-3 md:ml-5"
+                >
+                  {project?.final?.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
-        {project && project?.thirdimg && project?.fourthimg && (
+        {project?.id === 2 && project?.thirdimg && project?.fourthimg && (
           <div className="md:my-16 p-5 md:p-10 lg:p-20 w-full flex flex-col md:flex-row items-center justify-center gap-5 bg-light-pink rounded-xl md:rounded-3xl">
             <div className="flex flex-col gap-2 md:gap-5">
               <span className="italic font-baskervville text-lg md:text-2xl">
@@ -246,7 +248,7 @@ const ProjectsDetails = () => {
           </div>
         )}
 
-        {project && project?.mobilefirst && (
+        {/* {project && project?.mobilefirst && (
           <div className="my-7 md:my-10 lg:my-16 w-full">
             <div className="">
               <img
@@ -256,9 +258,9 @@ const ProjectsDetails = () => {
               />
             </div>
           </div>
-        )}
+        )} */}
 
-        {project && project?.features && (
+        {/* {project && project?.features && (
           <div className="mb-7 md:mb-0 lg:px-32">
             <div className="lg:py-5 flex justify-between text-medium-grey font-sans md:text-lg lg:text-xl font-normal">
               <div className="md:flex-1 w-[30%] md:w-auto font-semibold">
@@ -274,9 +276,9 @@ const ProjectsDetails = () => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
 
-        {project && project?.mobilesec && (
+        {project?.id === 3 && project?.mobilesec && (
           <div className="md:mt-10 lg:mt-20 w-full">
             <div className="">
               <img
@@ -288,7 +290,19 @@ const ProjectsDetails = () => {
           </div>
         )}
 
-        {project && project?.middle && (
+        {project?.id === 3 && project?.mobilethird && (
+          <div className="md:mt-10 lg:mt-20 w-full">
+            <div className="">
+              <img
+                src={require(`../../assets/${project?.mobilethird}.png`)}
+                alt="img"
+                className="w-full"
+              />
+            </div>
+          </div>
+        )}
+
+        {/* {project && project?.middle && (
           <div className="my-4 md:my-10 lg:my-16 w-full">
             <div className="">
               <img
@@ -298,9 +312,9 @@ const ProjectsDetails = () => {
               />
             </div>
           </div>
-        )}
+        )} */}
 
-        {project?.goal && (
+        {/* {project?.goal && (
           <div className="mt-5 mb-3 lg:px-32">
             <div className="lg:py-5 flex justify-between text-medium-grey font-sans md:text-lg lg:text-xl font-normal">
               <div className="md:flex-1 w-[30%] md:w-auto font-semibold">
@@ -312,9 +326,9 @@ const ProjectsDetails = () => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
 
-        {project && project?.goalImg && (
+        {project?.id === 1 && project?.goalImg && (
           <div className="my-4 md:my-10 lg:my-16 w-full">
             <div className="">
               <img
@@ -328,8 +342,8 @@ const ProjectsDetails = () => {
 
         {project?.journey && (
           <div className="mt-5 mb-3 lg:px-32">
-            <div className="lg:py-5 flex justify-between text-medium-grey font-sans md:text-lg lg:text-xl font-normal">
-              <div className="md:flex-1 w-[30%] md:w-auto font-semibold">
+            <div className="lg:py-5 flex justify-between text-medium-grey md:text-lg lg:text-xl font-normal">
+              <div className="md:flex-1 w-[30%] md:w-auto font-semibold font-baskervville">
                 <h6>User Journey</h6>
               </div>
 
@@ -345,7 +359,7 @@ const ProjectsDetails = () => {
           </div>
         )}
 
-        {project?.personnal && (
+        {/* {project?.personnal && (
           <div className="mt-5 mb-3 lg:px-32">
             <div className="lg:py-5 flex justify-between text-medium-grey font-sans md:text-lg lg:text-xl font-normal">
               <div className="md:flex-1 w-[30%] md:w-auto font-semibold">
@@ -357,9 +371,9 @@ const ProjectsDetails = () => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
 
-        {project && project?.lowFiImg && (
+        {/* {project && project?.lowFiImg && (
           <div className="md:my-16 p-5 md:p-10 lg:p-20 w-full grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-5 bg-light-pink rounded-xl md:rounded-3xl">
             {project?.lowFiImg.map((img) => (
               <div key={img} className="">
@@ -371,9 +385,9 @@ const ProjectsDetails = () => {
               </div>
             ))}
           </div>
-        )}
+        )} */}
 
-        {project?.lowFi && (
+        {/* {project?.lowFi && (
           <div className="mt-5 mb-3 lg:px-32">
             <div className="lg:py-5 flex justify-between text-medium-grey font-sans md:text-lg lg:text-xl font-normal">
               <div className="md:flex-1 w-[30%] md:w-auto font-semibold">
@@ -385,12 +399,12 @@ const ProjectsDetails = () => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
 
-        {project?.design && (
+        {project?.id === 1 && project?.design && (
           <div className="mt-3 mb-3 lg:px-32">
-            <div className="lg:py-5 flex justify-between text-medium-grey font-sans md:text-lg lg:text-xl font-normal">
-              <div className="md:flex-1 w-[30%] md:w-auto font-semibold">
+            <div className="lg:py-5 flex justify-between text-medium-grey md:text-lg lg:text-xl font-normal">
+              <div className="md:flex-1 w-[30%] md:w-auto font-semibold font-baskervville">
                 <h6>Design System</h6>
               </div>
 
@@ -401,7 +415,7 @@ const ProjectsDetails = () => {
           </div>
         )}
 
-        {project && project?.systemImg && (
+        {/* {project && project?.systemImg && (
           <div className="my-4 md:my-10 lg:my-16 w-full">
             <div className="">
               <img
@@ -411,7 +425,7 @@ const ProjectsDetails = () => {
               />
             </div>
           </div>
-        )}
+        )} */}
 
         {project && project?.designImg && (
           <div className="md:my-16 p-5 md:p-10 lg:p-20 w-full grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-5 bg-light-pink rounded-xl md:rounded-3xl">
@@ -427,7 +441,7 @@ const ProjectsDetails = () => {
           </div>
         )}
 
-        {project?.former && (
+        {/* {project?.former && (
           <div className="mt-5 mb-3 lg:px-32">
             <div className="lg:py-5 flex justify-between text-medium-grey font-sans md:text-lg lg:text-xl font-normal">
               <div className="md:flex-1 w-[30%] md:w-auto font-semibold">
@@ -439,9 +453,9 @@ const ProjectsDetails = () => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
 
-        {project && project?.formerImg && (
+        {/* {project && project?.formerImg && (
           <div className="md:my-16 p-5 md:p-10 lg:p-20 w-full grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-5 bg-light-pink rounded-xl md:rounded-3xl">
             {project?.formerImg.map((img) => (
               <div key={img} className="">
@@ -453,25 +467,25 @@ const ProjectsDetails = () => {
               </div>
             ))}
           </div>
-        )}
+        )} */}
 
-        
+        {project?.id !== 4 && (
+          <div className="mt-5 mb-3 lg:px-32">
+            <div className="lg:py-5 flex justify-between text-medium-grey gap-5 md:gap-0 md:text-lg lg:text-xl font-normal">
+              <div className="md:flex-1 w-[30%] md:w-auto font-semibold font-baskervville">
+                <h6>Final Designs</h6>
+              </div>
 
-        <div className="mt-5 mb-3 lg:px-32">
-          <div className="lg:py-5 flex justify-between text-medium-grey gap-5 md:gap-0 font-sans md:text-lg lg:text-xl font-normal">
-            <div className="md:flex-1 w-[30%] md:w-auto font-semibold">
-              <h6>Final Designs</h6>
-            </div>
-
-            <div className="md:flex-1 w-[65%] md:w-auto">
-              <ul className="list-disc flex flex-col gap-3 md:ml-5">
-                {project?.final?.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
+              <div className="md:flex-1 w-[65%] md:w-auto">
+                <ul className="list-disc flex flex-col gap-3 md:ml-5">
+                  {project?.final?.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
         {project?.sub.length && (
           <div>
@@ -497,8 +511,8 @@ const ProjectsDetails = () => {
         )}
 
         <div className="lg:px-32">
-          <div className="lg:py-5 flex justify-between text-medium-grey font-sans md:text-lg lg:text-xl font-normal">
-            <div className="md:flex-1 w-[30%] md:w-auto font-semibold">
+          <div className="lg:py-5 flex justify-between text-medium-grey md:text-lg lg:text-xl font-normal">
+            <div className="md:flex-1 w-[30%] md:w-auto font-semibold font-baskervville">
               <h6>Outcome</h6>
             </div>
 
@@ -510,7 +524,24 @@ const ProjectsDetails = () => {
           </div>
         </div>
 
-        <Check data={checkData} right />
+        {project?.notice && (
+          <section className="mt-12 bg-[#FFF6D3] border-l-8 border-rose-500 p-8">
+            <div className="grid md:grid-cols-2 gap-8">
+              {project?.notice?.map(({ quote, tag }) => (
+                <div className="space-y-4 font-baskervville flex flex-col justify-between">
+                  <p className="text-black text-md lg:text-xl font-semibold">
+                    "{quote}"
+                  </p>
+                  <p className="text-[#FF383C] text-md lg:text-xl font-semibold ">
+                    {tag}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <Connect />
       </div>
 
       <Footer />

@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Home from "../../screen/home/Home";
+//import Home from "../../screen/home/Home";
 import Projects from "../../screen/projects/Projects";
 import ProjectsDetails from "../../screen/projects/ProjectsDetails";
 
@@ -27,7 +27,7 @@ function Main() {
     <BrowserRouter>
       <div className="mx-auto max-w-[1800px]">
         <Routes>
-          <Route path="/about" element={<Home />} />
+          {/* <Route path="/about" element={<Home />} /> */}
           <Route index path="/" element={<Projects />} />
           <Route path="/details/:id" element={<ProjectsDetails />} />
         </Routes>

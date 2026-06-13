@@ -2,9 +2,11 @@
   {
     "id": 1,
     "preview": "interacta",
-    "name": "Interacta",
+    "previewmb": "interactamb",
+    "name": "Interacta enhances business efficiency by providing a unified platform for optimizing operations ",
     "subname": "Customer Relationship Management Platform",
     "image": "interactaImg",
+    "shortText": "An innovation solution that integrates key CRM features into a system platform.",
     "year": "2024",
     "service": "Web, UX Design, System Redesign ",
     "about": "Interacta enables businesses to simplify their operations with an all-in-one platform designed for managing and analyzing marketing campaigns, tracking sales performance, and enhancing customer engagement. By offering powerful tools and real-time insights, it allows companies to streamline their processes, make informed decisions, and foster deeper connections with their customers.",
@@ -14,7 +16,7 @@
     "research": "Businesses are looking for a single platform that combines all essential CRM functions, simplifying workflows and eliminating the need to juggle multiple separate tools.",
     "tasks": [
       "Create user-friendly interfaces for setting up and managing automated workflows, campaign triggers, and follow-up actions to enhance operational efficiency.",
-      "Develop integrated communication tools, such as email templates, chat interfaces, and customer interaction logs, to facilitate seamless engagement with clients.",
+      "Create user-friendly interfaces for setting up and managing automated workflows, campaign triggers, and follow-up actions to enhance operational efficiency.",
       "Design an intuitive and customizable dashboard that provides users with an overview of key metrics, campaign performance, and sales data in an actionable format."
     ],
     "thirdimg": "interactaDesign1",
@@ -47,17 +49,29 @@
       "subintasix",
       "subintsseven"
     ],
-    "outcome": "The intuitive design and advanced features, such as real-time analytics, automation workflows, and mobile optimization, enable businesses to make data-driven decisions, improve operational workflows, and strengthen customer relationships"
+    "outcome": "The intuitive design and advanced features, such as real-time analytics, automation workflows, and mobile optimization, enable businesses to make data-driven decisions, improve operational workflows, and strengthen customer relationships.",
+    "notice": [
+      {
+        "quote": "The navigation overhaul and the automation builder really changed how we thought about the product. It stopped feeling like a data tool and started feeling like something our sales and support teams would genuinely want to open every morning.",
+        "tag": "Luka (Stakeholder, product review)"
+      },
+      {
+        "quote": "The split-panel automation builder was the thing that surprised us most. It wasn't something we had asked for, but once we saw it working we couldn't imagine going back to a plain form. The logic just made so much more sense visually.",
+        "tag": "Product owner, post-delivery feedback"
+      }
+    ]
   },
   {
     "id": 2,
     "preview": "wecollect",
-    "name": "WeCollect",
+    "previewmb": "wecollectmb",
+    "name": "WeCollect simplifies field data collection and analysis with real-time monitoring & dynamic visualization",
     "subname": "Data Inventory, Collection Platform",
+    "shortText": "From a disconnected data tool to a comprehensive platform that provides intuitive solution.",
     "image": "wecollectImg",
     "year": "2022",
     "service": "Web, UX Design, UI Design, System Redesign",
-    "about": "WeCollect is an interactive app designed to help field supervisors gather data from agents, monitor activities in real time, perform analytics, and inspect areas. It includes a range of features such as offline and online data collection, data synchronization, and playback of tracking activities, making it a versatile tool for data evaluation and field operations.",
+    "about": "WeCollect is a conceptual interactive application that allows a field supervisor to collect data from field agents, perform real time monitoring and analytics, geocode areas and inspect, as well as evaluate the data. WeCollect offers a variety of powerful features - offline and online data collection, synchronization of data, playback of tracking activities. ",
     "firstimg": "wecollectFirst",
     "secondimg": "wecollectSecond",
     "desc": "WeCollect simplifies field data collection and analysis with real-time monitoring & dynamic visualization",
@@ -101,22 +115,23 @@
   {
     "id": 3,
     "preview": "monay",
-    "name": "Monay",
+    "previewmb": "monaymb",
+    "name": "Keyeve bridges the gap between financial awareness and financial action",
     "subname": "Fintech, Mobile Platform",
+    "shortText": "A smart app designed to help users take control of their money through budget tracking",
     "adjust": true,
     "image": "monayImg",
     "year": "2021",
     "service": "Mobile, UX Design, Research",
-    "about": "Introducing a new app designed specifically for digital nomads - Monay. This app allows you to manage your finances from anywhere in the world, providing a comprehensive solution for all your financial needs. With the ability to connect to multiple bank accounts and track your expenses in real-time, you can stay on top of your finances no matter where you are.",
+    "about": "Most personal finance apps do one thing well: they show you where your money went. Keyeve was designed to go further. The goal was to build an experience that not only surfaces financial data clearly but actively motivates users to make better decisions, through goal-setting tools, investment tracking and a points-based rewards system tied to healthy financial behaviour. The result is a product that treats engagement as a design outcome, not an afterthought.",
     "firstimg": "monayFirst",
     "secondimg": "monaySecond",
     "desc": "Monay offers digital nomads a way to manage finances globally, connect multiple accounts in real-time",
-    "research": "70% of the users who are digital nomads, complained that they have not found a reliable platform to send and receive money globally while also setting a budget milestones for themselves to manage expenditures for themselves.",
+    "research": "Users knew they should be saving but struggled to stay motivated. Without visible progress or positive reinforcement, the habit rarely stuck beyond the first few weeks of using a new app.",
     "tasks": [
-      "Conduct interviews, surveys, and usability tests to understand user needs, pain points, and preferences.",
-      "Revise the structure of information to ensure users can easily find and access what they need.",
-      "Ensure the design is accessible to users with various disabilities, adhering to relevant guidelines and standards.",
-      "Develop interactive prototypes to test design ideas and gather feedback before final implementation."
+      "Create a unified budget and accounts view that gives users a complete picture of their finances without overwhelming them with data.",
+      "Build a savings and investment tracker that makes progress visible and ties individual actions to longer-term financial goals.",
+      "Design a rewards system that feels genuinely motivating rather than gimmicky, with clear pathways to earning and redeeming points for real value."
     ],
     "mobilefirst": "mobilefirstmon",
     "features": [
@@ -125,6 +140,7 @@
       "Built-in analytics feature that allows users to monitor system performance, user engagement, and other key metrics."
     ],
     "mobilesec": "mobilesecmon",
+    "mobilethird": "mobilethirdmon",
     "middle": "midmonImg",
     "userFlow": "For effective split bills and payments, users should be able to;",
     "userFlows": [
@@ -137,9 +153,9 @@
       "Payment splits can be made in various divisors or fractions or percentiles."
     ],
     "final": [
-      "Visually appealing dashboard that provides users with a quick overview of their most important data and activities.",
-      "Seamless integration of multiple accounts, allowing users to manage various profiles or services from a single platform.",
-      "Well-designed onboarding experience that includes interactive tutorials and walkthroughs to help new users get up to speed quickly."
+      "The rewards surface splits into two clear modes: earning points through financial actions and redeeming them for services or gift cards. Point values are visible upfront on every item so users always know what they are working toward.",
+      "Tapping a transaction surfaces a full detail view with receipt reference, payment method and a 6-month bar chart showing spend with that merchant. This turns a routine transaction log into a genuinely useful behavioural insight.",
+      "Users can toggle between Debts and Savings views, with a prominent balance card and filtered investment categories. Empty and populated states were both designed to keep users oriented at every stage of their journey."
     ],
     "sub": [
       "submonone",
@@ -149,13 +165,25 @@
       "submonfive",
       "submonsix"
     ],
-    "outcome": "Learners spend more time on the platform due to the interactive course modules, gamification features, and personalized learning paths that keep them motivated and invested in their education."
+    "outcome": "The 40% increase in daily active users validated the core thesis behind the design: that making financial management feel rewarding rather than punishing is not just a nice-to-have, it is the thing that determines whether people come back. Keyeve demonstrated that a well-designed rewards system can be a genuine retention mechanism, not just a marketing feature.",
+    "notice": [
+      {
+        "quote": "I have tried a lot of budgeting apps and they all make me feel bad about my spending. Keyeve is the first one that actually made me want to open it every day.",
+        "tag": "Daniel (Interview participant, post-launch research)"
+      },
+      {
+        "quote": "The rewards system was the thing that changed behaviour. Users who engaged with it in the first week had significantly higher 30-day retention than those who did not.",
+        "tag": "Davina (Head of Product)"
+      }
+    ]
   },
   {
     "id": 4,
     "preview": "gradual",
-    "name": "Gradual",
+    "previewmb": "gradualmb",
+    "name": "Gradual empowers learners with a personalized and engaging e-learning experience for continuous growth",
     "subname": "Educational, E-learning Platform",
+    "shortText": "An interactive and accessible e-learning experience that empowers learners.",
     "image": "gradualImg",
     "year": "2021",
     "service": "Web, Mobile, UX Design, Research",
@@ -166,8 +194,8 @@
     "research": "Learners are more engaged with interactive modules, quizzes, and multimedia content, which help reinforce concepts and make learning more enjoyable.",
     "tasks": [
       "Analyze similar e-learning platforms to identify strengths, weaknesses, and opportunities for differentiation, and incorporate best practices into the design.",
-      "Successfully integrated gamification features such as badges, leaderboards, and rewards that enhance user engagement and make learning more enjoyable.",
-      "A dedicated analytics dashboard for educators to monitor student performance, engagement levels, and course effectiveness."
+      "Work on the design of course modules, lesson pages, multimedia integration, and assessment formats, ensuring that content is presented in an accessible manner.",
+      "Design gamification features such as badges, leaderboards, progress bars, and achievement notifications to enhance user engagement and motivation."
     ],
     "middle": "midgradImg",
     "userFlow": "For effective split bills and payments, users should be able to;",

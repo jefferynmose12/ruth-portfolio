@@ -2,8 +2,6 @@ import React from "react";
 import about1 from "../../assets/about1.png";
 import about2 from "../../assets/about2.png";
 import about3 from "../../assets/about3.png";
-import { Link } from "react-router-dom";
-import { LuMoveRight } from "react-icons/lu";
 import Check from "../check/Check";
 
 const skills = [

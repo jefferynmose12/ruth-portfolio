@@ -4,16 +4,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        baskervville: ['Baskervville', 'serif'],
-        sans: ['Inter', 'sans-serif'],
+        baskervville: ["Baskervville", "serif"],
+        sans: ["Inter", "sans-serif"],
       },
       colors: {
         "black-text": "rgba(0, 0, 0, 1)",
-        "dark-orange": "rgba(199, 105, 17, 1)",
-        "fade-grey": "rgba(136, 136, 136, 1)",
+        "dark-orange": "#B85600",
+        "fade-grey": "#3F3E3E",
         "medium-grey": "rgba(71, 71, 71, 1)",
         "light-grey-border": "rgba(227, 227, 227, 1)",
-        "light-pink": "#FFE7CA"
+        "light-pink": "#FFE7CA",
       },
     },
   },
