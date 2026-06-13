@@ -50,26 +50,26 @@ const Projects = () => {
     });
   };
 
-  // useEffect(() => {
-  //   const el = carouselRef.current;
-  //   if (!el) return;
+  useEffect(() => {
+    const el = carouselRef.current;
+    if (!el) return;
 
-  //   const interval = setInterval(() => {
-  //     if (isHovered.current) return;
+    const interval = setInterval(() => {
+      if (isHovered.current) return;
 
-  //     const card = el.querySelector("a");
-  //     if (!card) return;
+      const card = el.querySelector("a");
+      if (!card) return;
 
-  //     const cardWidth = card.offsetWidth + 24;
+      const cardWidth = card.offsetWidth + 24;
 
-  //     el.scrollBy({
-  //       left: cardWidth,
-  //       behavior: "smooth",
-  //     });
-  //   }, 2000);
+      el.scrollBy({
+        left: cardWidth,
+        behavior: "smooth",
+      });
+    }, 2000);
 
-  //   return () => clearInterval(interval);
-  // }, []);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
