@@ -71,7 +71,8 @@ const Footer = () => {
           </a>
 
           <a
-            href="mailto:Pauldoris917@gmail.com"
+            href="mailto:Pauldoris917@gmail.com?subject=Let’s%20Connect"
+            target="_self"
             className="hover:text-dark-orange"
           >
             Email

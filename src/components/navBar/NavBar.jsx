@@ -78,7 +78,8 @@ const NavBar = () => {
           </a>
 
           <a
-            href="mailto:Pauldoris917@gmail.com"
+            href="mailto:Pauldoris917@gmail.com?subject=Let’s%20Connect"
+            target="_self"
             onClick={() => setOpen(false)}
             className="hover:text-dark-orange"
           >
@@ -130,7 +131,8 @@ const NavBar = () => {
           </a>
 
           <a
-            href="mailto:Pauldoris917@gmail.com"
+            href="mailto:Pauldoris917@gmail.com?subject=Let’s%20Connect"
+            target="_self"
             onClick={() => setOpen(false)}
             className="hover:text-dark-orange"
           >
