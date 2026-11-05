@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import doris from "../../assets/about1.png";
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
@@ -46,7 +46,7 @@ const NavBar = () => {
           className="items-center gap-2 font-medium text-lg hidden md:flex"
         >
           <img src={doris} alt="doris" className="h-8 w-8 rounded-full" />
-          <span>Doris Paul</span>
+          <span>Doris Nmose</span>
         </Link>
 
         <Link to="/" className="md:hidden">
@@ -131,7 +131,7 @@ const NavBar = () => {
           </a>
 
           <a
-            href="mailto:Pauldoris917@gmail.com?subject=Let’s%20Connect"
+            href="mailto:nmosedoris@gmail.com?subject=Let’s%20Connect"
             target="_self"
             onClick={() => setOpen(false)}
             className="hover:text-dark-orange"

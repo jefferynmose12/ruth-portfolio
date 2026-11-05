@@ -20,7 +20,7 @@ const Connect = () => {
         </a>
 
         <a
-          href="mailto:Pauldoris917@gmail.com?subject=Let’s%20Connect"
+          href="mailto:nmosedoris@gmail.com?subject=Let’s%20Connect"
           target="_self"
           className="w-full h-[90px] md:w-[384px] md:h-[107px] flex justify-center items-center rounded-full border-2 border-[#FF8D28] font-semibold text-xl lg:text-2xl hover:bg-[#FF8D28] hover:text-white transition"
         >

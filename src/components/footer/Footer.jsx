@@ -40,7 +40,7 @@ const Footer = () => {
           className="items-center gap-2 font-medium text-lg hidden md:flex"
         >
           <img src={doris} alt="doris" className="h-8 w-8 rounded-full" />
-          <span>Doris Paul</span>
+          <span>Doris Nmose</span>
         </Link>
 
         <Link to="/" className="md:hidden">
@@ -71,7 +71,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="mailto:Pauldoris917@gmail.com?subject=Let’s%20Connect"
+            href="mailto:nmosedoris@gmail.com?subject=Let’s%20Connect"
             target="_self"
             className="hover:text-dark-orange"
           >
